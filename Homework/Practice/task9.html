@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Создать обьект который будет иметь два свойства.
+    Добавить метод который будет показывать значения свойств в консоли.
+    Вызвать метод.
+    <script>
+        let Person = {
+            name: "James",
+            age: 25,
+
+            showInfo() {
+                console.log(this.name);
+                console.log(this.age);
+            }
+        }
+
+        Person.showInfo();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Написать функцию, получающую на вход 2 числа.
+    Если оба числа четные, функция возвращает произведение чисел.
+    Если оба нечетные, функция возвращает сумму.
+    Если одно из чисел четное, а второе нечетное функция возвращает это нечетное число.
+    <script>
+        function evenOrOdd(a, b) {
+            if (a % 2 == 0 && b % 2 == 0) {
+                return a*b
+            }
+            else if (a % 2 !== 0 && b % 2 !== 0) {
+                return a+b
+            }
+            else
+            {
+                let result
+                a % 2 !== 0 ? result = a : result = b
+                return result 
+            }
+        }
+
+        console.log(evenOrOdd(9, 3));
+    </script>
+</body>
+
+</html>

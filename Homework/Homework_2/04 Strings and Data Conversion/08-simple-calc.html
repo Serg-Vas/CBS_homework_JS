@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+</head>
+
+<body>
+    <script>
+        let inputX = +prompt("Введіть перший операнд", 0);
+        let inputY = +prompt("Введіть другий операнд", 0);
+        let operator = prompt("Введіть операцію (+, -, *, /)", "+");
+        let result;
+
+        switch (operator) {
+            case "+":
+                result = inputX + inputY;
+                break;
+            case "-":
+                result = inputX - inputY;
+                break;
+            case "*":
+                result = inputX * inputY;
+                break;
+            case "/":
+                inputY !== 0 ? result = inputX / inputY : result = "Ділення на нуль неможливе";
+                break;
+            default:
+                result = "Невірна операція";
+        }
+
+        console.log(`${inputX} ${operator} ${inputY} = ${result}`);
+    </script>
+</body>
+
+</html>

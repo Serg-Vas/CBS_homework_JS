@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Через prompt - пользователь вводит 3 числа.
+    Из этих чисел найти максимальное и выдать сообщение какое из них найбольшее.
+    Учесть вариант равенства чисел
+    <script>
+        let arr = []
+        for (let input, i = 0; i < 3; i++) {
+            input = prompt("Введіть число")
+            arr.push(parseInt(input))
+        }
+        
+        let maxNumber = arr[0];
+        let equal = true
+        for (let i = 1; i < arr.length; i++) {
+            arr[i] > maxNumber ? (maxNumber = arr[i], equal = false) : arr[i]
+        }
+
+        equal == true ? console.log(`Найбільше число: ${maxNumber} дублюється в масиві`) : console.log(`Найбільше число: ${maxNumber}`);
+    </script>
+</body>
+
+</html>

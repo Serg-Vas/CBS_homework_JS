@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        Створіть функцію, яка приймає масив значень та повертає масив з значеннями, що дублюються, або null якщо
+        повторюваних значень у масиві немає.
+    </pre>
+    <script>
+        let arr = [1, 1, 2, 2, 3, 4, 5, 6, 7, 7]
+
+        
+        function duplicates(arr) {
+            const arrForDuplicates = arr.filter((value, index) => arr.indexOf(value) !== index); //перевірка чи індекс поточного елементу не дорівнює індексу першого входження. Якщо вони не рівні, це означає, що поточний елемент зустрічається не вперше у масиві
+            return arrForDuplicates.length > 0 ? arrForDuplicates : null;
+        }
+        console.log(duplicates(arr));
+
+    </script>
+</body>
+</html>

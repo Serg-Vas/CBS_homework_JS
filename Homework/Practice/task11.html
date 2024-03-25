@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Создать функцию и присвоить ее методу обьектов,
+    которая будет показывать Имя Фамилию обьекта к которому мы обращаемся.
+
+    <script>
+        let person1 = {
+            firstName: "Jane",
+            lastName: "Smith",
+            showName: showInfo
+        }
+
+        let person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            showName: showInfo
+        };
+
+        function showInfo() {
+            console.log(this.firstName + " " + this.lastName);
+        }
+
+        person1.showName();
+        person2.showName();
+    </script>
+</body>
+
+</html>

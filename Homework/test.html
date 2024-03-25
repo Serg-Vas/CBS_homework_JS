@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(value, index, ar) {
+        return value < 4;
+        }
+        var arr = [ 1, 2, 3, 4, 5, 6 ];
+        var arr2 = arr.filter(test);
+        console.log(arr2); // Array [ 1, 2, 3 ]
+
+        var arr = [ 1, 2, 3, 4, 5, 6 ];
+        var arr2 = arr.map(function(value, index, ar) {
+        return value * 2;
+        });
+        console.log(arr2); // Array [ 2, 4, 6, 8, 10, 12 ]
+
+        var arr = [ 1, 2, 3 ];
+        var sum = arr.reduce(function(value1, value2, index, ar) {
+        return value1 + value2;
+        }, 0);
+        console.log(sum); // 6
+
+        var arr = [ [1, 2], [3, 4] ];
+        var sum = arr.reduceRight(function(arr1, arr2, index, ar) {
+        return arr1.concat(arr2);
+        }, []);
+        console.log(sum); // Array [ 3, 4, 1, 2 ]
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Создать функцию , которая будет возвращать обьект с тремя свойствами: Name, LastName, Age.
+    Вывести значения свойств в консоли.
+    <script>
+        function createPerson(Name, LastName, Age) {
+            return {
+                Name,
+                LastName,
+                Age
+            };
+        }
+
+        let person = createPerson("John", "Smith", 30);
+        console.log("Name:", person.Name);
+        console.log("LastName:", person.LastName);
+        console.log("Age:", person.Age);
+    </script>
+</body>
+</html>

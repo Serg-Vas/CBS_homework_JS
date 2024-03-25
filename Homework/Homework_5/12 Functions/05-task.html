@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task X</title>
+</head>
+<body>
+    <pre>
+        Завдання:
+        Запитайте у користувача число. Виведіть усі числа в обраному одязі від введеного користувачем значення до 1.
+        Використовуйте для вирішення рекурсію.
+    </pre>
+    <script>
+        let input = prompt("Введіть число")
+        recursion(input)
+
+        function recursion(input) {
+            !isNaN(input) && input > 0 ? console.log(input) : console.log("End");
+            input > 1 ? recursion(--input) : console.log("End");
+        }
+    </script>
+</body>
+</html>

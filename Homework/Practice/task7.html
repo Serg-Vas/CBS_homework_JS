@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Есть массив , в котором числа например:
+    const arr1 = [2, 4, 6, 8];
+    const arr2 = [2, 4, 6, 7, 8];
+    Написать логику которая проверяет на наличие нечетных чисел.
+    В случае если нет нечетного числа console.log(false);
+    В случае если есть нечетное число console.log(true);
+<script>
+    const arr1 = [2, 4, 6, 8];
+    const arr2 = [2, 4, 6, 7, 8];
+
+    function oddNum(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    console.log(oddNum(arr1)); // Output: false
+    console.log(oddNum(arr2)); // Output: true
+</script>
+</body>
+</html>
